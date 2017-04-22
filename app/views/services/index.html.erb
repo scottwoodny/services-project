@@ -17,7 +17,7 @@
     <% @services.each do |service| %>
       <tr>
         <td><%= service.title %></td>
-        <td><%= service.url %></td>
+        <td><%= image_tag service.url %></td>
         <td><%= service.description %></td>
         <td><%= service.price_in_cents %></td>
         <!-- this breaks when i put formatted price -->
