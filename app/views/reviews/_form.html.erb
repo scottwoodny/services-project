@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :logo %>
+    <%= f.text_field :logo %>
+  </div>
+
+  <div class="field">
     <!-- <%= f.label :service_id %> -->
     <%= f.hidden_field :service_id, value: @service.id %>
   </div>

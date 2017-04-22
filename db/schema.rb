@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170421235433) do
+ActiveRecord::Schema.define(version: 20170422185827) do
 
   create_table "reviews", force: :cascade do |t|
     t.text     "comment"
     t.integer  "service_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "logo"
     t.index ["service_id"], name: "index_reviews_on_service_id"
   end
 
