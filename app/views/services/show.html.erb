@@ -32,6 +32,7 @@
 
 <% @service.reviews.each do |review| %>
   <p>
+    <%= image_tag review.logo %>
     <%= review.comment %><br>
     Added on <%= time_ago_in_words review.created_at %>
   </p>
