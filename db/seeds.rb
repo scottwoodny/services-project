@@ -12,7 +12,7 @@ ecommerce.reviews.create(logo: "https://s3.amazonaws.com/BURC_Pages/downloads/a-
 ecommerce.reviews.create(logo: "http://www.pngmart.com/files/3/Starbucks-Logo-PNG-File.png", comment: "We used WynAgency to launch our Latin America products site they really understand the cultural nuances of the region to capture our core audience.")
 ecommerce.reviews.create(logo: "https://www.seeklogo.net/wp-content/uploads/2013/12/adidas-black-vector-logo-400x400.png", comment: "We have increased our customer base by 300% since launching an online mobile brand campaign with WnyAngency.")
 
-webdesign = Service.new(title: "UX/UI Design", url: "http://68.media.tumblr.com/46e720ae79e30859bb0ec818cba26d49/tumblr_ootj1nIlOi1uaq136o4_1280.jpg", description: "Experience Design,’ or UX/UI, is design based on a strategy that focuses on the emotional connection between a brand’s offering and the people that use it.", price_in_cents: 1)
+webdesign = Service.new(title: "Web Design", url: "http://68.media.tumblr.com/46e720ae79e30859bb0ec818cba26d49/tumblr_ootj1nIlOi1uaq136o4_1280.jpg", description: "Experience Design,’ or UX/UI, is design based on a strategy that focuses on the emotional connection between a brand’s offering and the people that use it.", price_in_cents: 1)
 webdesign.save!
 webdesign.reviews.create(logo: "https://s3.amazonaws.com/BURC_Pages/downloads/a-smile_bw.png", comment: "WynAgency is the best front end shop in the country!")
 webdesign.reviews.create(logo: "http://www.pngmart.com/files/3/Starbucks-Logo-PNG-File.png", comment: "WynAgency enabled us to speed our time to launch in changing languages and localizing our site for Latin America region.")

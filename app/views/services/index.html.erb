@@ -1,29 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<!-- <h1>Services</h1> -->
 
 
+<body class="body1">
   <div class="content-top">
     <h1>WYNAGENCY</h1>
     <h2>A creative design studio</h2>
     <h3>that helps your business grow.</h3>
     <h4>scroll down to learn more</h4>
-  </div>
 </div>
+</body>
 
 <table>
 <tbody>
   <% @services.each do |service| %>
     <tr>
-      <!-- <td><%= service.title %></td> -->
-      <td><%= image_tag service.url, size: "240x180", class: "homeservice"%></td>
-      <td><%= link_to 'EXPLORE', service %></td>
+      <td class="titles"><%= service.title %></td>
+      <td><%= image_tag service.url, size: "245x155", class: "homeservice"%></td>
+
+        <td><%= link_to 'EXPLORE', service, class:"explore" %></td>
+
+
       <!-- <td><%= link_to 'Edit', edit_service_path(service) %></td> -->
       <!-- <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
     </tr>
   <% end %>
 </tbody>
 </table>
+
 
 <div class="content-bottom">
   <h1>About Us</h1>
