@@ -21,12 +21,12 @@
   color: #fff;
 }
 .content-top h1 {
-  font-family: Adam;
+  font-family: Adam,serif;
   font-size: 35px;
 }
 
 .content-top h2 {
-  font-family: porter;
+  font-family: porter,serif;
   font-size: 60px;
   text-align: center;
   margin: 3.5em 0 .5em 0;
@@ -62,7 +62,7 @@ body {
   font-family: futura;
   width: 45%;
   font-size: 15px;
-  
+
 }
 
 table {

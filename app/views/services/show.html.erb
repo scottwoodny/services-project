@@ -1,41 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+
   <strong>Title:</strong>
-  <%= @service.title %>
+  <h1 class="service_top"> <%= @service.title%> </h1>
 </p>
+
+
+<!-- :style => "color: red;" -->
 
 <p>
 
   <strong>Url:</strong>
-  <%= image_tag @service.url %>
+  <%= image_tag @service.url, size: "220 x 160"%>
 </p>
 
-<p>
-  <strong>Description:</strong>
+<p class="description_review text">
+
   <%= @service.description %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Price:</strong>
   <%= @service.price_in_cents %>
 
-</p>
+</p> -->
 
 <h1>New Review</h1>
 
 <%= render 'reviews/form', review: @review %>
 
 
-<h2> Reviews </h2>
+<h2 class="service_top special"> Reviews </h2>
 <!-- # <%= @service.reviews %> -->
 
 <% @service.reviews.each do |review| %>
-  <p>
-    <%= image_tag review.logo, size: "30x30" %>
-    <%= review.comment %><br>
-    Added on <%= time_ago_in_words review.created_at %>
-  </p>
+  <div class="review">
+    <p class="review_comment text"> <%= review.comment %></p>
+    <%= image_tag review.logo, class: "review_image" %>
+    <!-- Added on <%= time_ago_in_words review.created_at %> -->
+  <!-- can move this above p class to make logo in front of comment> -->
+  </div>
 <% end %>
 
 
