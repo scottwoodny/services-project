@@ -1,49 +1,63 @@
+
 <p id="notice"><%= notice %></p>
-
-
-  <strong>Title:</strong>
-  <h1 class="service_top"> <%= @service.title%> </h1>
+  <h1 class="service_title"> <%= @service.title%> </h1>
 </p>
 
-
-<!-- :style => "color: red;" -->
-
-<p>
-
-  <strong>Url:</strong>
-  <%= image_tag @service.url, size: "220 x 160"%>
-</p>
-
-<p class="description_review text">
-
+<p class="description_review">
   <%= @service.description %>
+</p>
+
+<p class="image_url">
+  <%= image_tag @service.url, size: "1265x910"%>
 </p>
 
 <!-- <p>
   <strong>Price:</strong>
   <%= @service.price_in_cents %>
-
 </p> -->
 
-<h1>New Review</h1>
+<h1 class="review_title">See what our clients have to say</h1>
 
-<%= render 'reviews/form', review: @review %>
-
-
-<h2 class="service_top special"> Reviews </h2>
-<!-- # <%= @service.reviews %> -->
+<% render 'reviews/form', review: @review %>
+<% @service.reviews %>
 
 <% @service.reviews.each do |review| %>
-  <div class="review">
-    <p class="review_comment text"> <%= review.comment %></p>
-    <%= image_tag review.logo, class: "review_image" %>
+  <!-- <div class="review"> -->
+
+  <p class="review_rating">
+      <h2><span class="rating">
+      <%= image_tag review.logo, class: "review_logo" %>
+      <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+      <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+      <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+      <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+      <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+      <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+      <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+      <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+      <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    </h2>
+  </span>
+
+</p>
+<div class="review_comment">
+<br><br><%= review.comment %></br></br>
+</div>
+
+  <!-- <br><%= review.comment %></br> -->
+    <!-- <%= image_tag review.logo, class: "review_logo" %> -->
     <!-- Added on <%= time_ago_in_words review.created_at %> -->
   <!-- can move this above p class to make logo in front of comment> -->
-  </div>
+  <!-- </div> -->
 <% end %>
 
+<h2 class= "review_contact">See for yourself</h2>
 
-
+<div class="social">
+      <i class="fa fa-github-alt fa-2x" aria-hidden="true"><a class="github" href="https://github.com/yankela"></a></i>
+      <i class="fa fa-twitter fa-2x" aria-hidden="true"><a class="twitter" href="https://twitter.com/yankel_a"></a></i>
+      <i class="fa fa-linkedin fa-2x" aria-hidden="true"><a class="linkedin"href="https://www.linkedin.com/in/yankel-amarante-63960794/"></a></i>
+    </div>
 
 <%= link_to 'Edit', edit_service_path(@service) %> |
 <%= link_to 'Back', services_path %>

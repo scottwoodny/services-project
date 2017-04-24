@@ -1,44 +1,104 @@
 // Place all the styles related to the services controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.text {
-  color: black;
-  font-family: futura, sans-serif;
-  font-size: 15px;
+
+.image_url {
+  padding: 0px;
+  margin: 0px 0 0 -1.6em;
+}
+.review_title {
+  font-family: porter;
+  font-size: 42px;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
-
-.service_top {
-  color: #fff;
-  font-family: Adam, serif;
-  font-size: 35px;
+.review_contact {
+  font-family: porter;
+  font-size: 42px;
+  text-align: center;
+  margin-top: 2em;
+}
+.service_title {
+  font-family: porter;
+  font-size: 80px;
+  margin-top: 1em;
 }
 
 .description_review {
-  margin-top: 80px;
-  font-size: 20px;
+  font-size: 16px;
+  font-family: futura;
+  width:40%;
 }
 
-.review {
-// make review a flex parent
+.social {
   display: flex;
-  flex-direction: row;
-
+  align-items: center;
+  justify-content: center;
 }
+.social i {
+  padding-right: 1em;
+}
+
+
+
  // this standard flex areas are flex -grow flex shringk and flex basis
 .review_comment {
-  flex: 1 1 0;
-  // width: 45%;
+  // flex: 1 1 0;
+  width: 45%;
+  font-size: 16px;
+  text-align: left;
+  font-family: futura;
+margin-left: 20.7em;
+}
+
+.rating {
+  border: none;
+  float: left;
+  color: #fff;
+  margin-left: 16.9em;
 
 }
 
-.review_image {
-  flex: 1 1 30px;
-  height: 30px;
-  max-width: 30px;
-  min-width: 30px;
-
+.review_logo {
+  height: 33px;
+  max-width: 33px;
+  min-width: 33px;
+  padding-right: .5em;
+  text-align: center;
 }
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+  color: #FFCC4D;
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+ float: right;
+}
+
+
 
 
 
