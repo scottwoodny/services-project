@@ -1,26 +1,26 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 
-<body class="body1">
+<div class="background_image">
   <div class="content-top">
     <h1>WYNAGENCY</h1>
     <h2>A creative design studio</h2>
     <h3>that helps your business grow.</h3>
     <h4>scroll down to learn more</h4>
   </div>
-</body>
+</div>
 
 <figure class="scott">
-  <img src="https://placeholdit.imgix.net/~text?txtsize=12&txt=130%C3%97130&w=130&h=130" alt="scott">
+  <img src="https://68.media.tumblr.com/a4c84841caea1538dca305c971c13c04/tumblr_ooxxm9bgir1uaq136o1_250.jpg" alt="scott">
   <figcaption>
-    Title Description
+    Founder | Miami
   </figcaption>
 </figure>
 
 <figure class="yankel">
   <img src="https://68.media.tumblr.com/ab3ead72e5dd69d86652f3bc9583104d/tumblr_ooxi5h8Nmz1uaq136o1_250.jpg" alt="yankel">
   <figcaption>
-    Title Description
+    Founder | Miami
   </figcaption>
 </figure>
 
@@ -33,30 +33,30 @@ Our team is over 11 strong and counting.  With diverse backgrounds and experienc
 
 </div>
 
+<div class="alldaserviceinfo">
+  <div>
+    <% @services.each do |service| %>
+      <span class="titles"><%= service.title %></span>
+    <% end %>
+  </div>
 
-<div>
-  <% @services.each do |service| %>
-  <span class="titles"><%= service.title %></span>
-  <% end %>
-</div>
-
-<div class="services">
-  <% @services.each do |service| %>
+  <div class="services">
+    <% @services.each do |service| %>
       <!-- <td class="titles"><%= service.title %></td> -->
-  <%= image_tag service.url, size: "302x212", class: "homeservice"%>
+    <%= image_tag service.url, size: "300x200", class: "homeservice"%>
   <!-- <%= link_to 'EXPLORE', service, class:"explore"%> -->
-      <!-- <td><%= link_to 'Edit', edit_service_path(service) %></td> -->
-      <!-- <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-  <% end %>
+    <% end %>
+  </div>
+
+  <div class="service_buttons">
+    <% @services.each do |service| %>
+    <%= link_to 'EXPLORE', service, class:"explore"%>
+  <!-- <td><%= link_to 'Edit', edit_service_path(service) %></td>
+  <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+    <% end %>
+  </div>
 </div>
 
-<div class="service_buttons">
-  <% @services.each do |service| %>
-  <%= link_to 'EXPLORE', service, class:"explore"%>
-  <% end %>
-</div>
 
 
-
-
-<!-- <%= link_to 'New Service', new_service_path %> -->
+<%= link_to 'New Service', new_service_path %>

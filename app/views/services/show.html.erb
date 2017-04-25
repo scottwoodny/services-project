@@ -7,24 +7,19 @@
   <%= @service.description %>
 </p>
 
-<p class="image_url">
-  <%= image_tag @service.url, size: "1265x910"%>
-</p>
 
-<!-- <p>
-  <strong>Price:</strong>
-  <%= @service.price_in_cents %>
-</p> -->
+<div class="image_url">
+  <%= image_tag @service.url, class: "largeimage"%>
+</div>
+
+<!-- ADD review FORMS UNDER HERE -->
 
 <h1 class="review_title">See what our clients have to say</h1>
 
-<% render 'reviews/form', review: @review %>
-<% @service.reviews %>
+<!-- <% @service.reviews %> -->
 
 <% @service.reviews.each do |review| %>
-  <!-- <div class="review"> -->
-
-  <p class="review_rating">
+  <div class="review_rating">
       <h2><span class="rating">
       <%= image_tag review.logo, class: "review_logo" %>
       <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
@@ -38,25 +33,18 @@
       <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
     </h2>
   </span>
-
-</p>
+</div>
 <div class="review_comment">
 <br><br><%= review.comment %></br></br>
 </div>
-
-  <!-- <br><%= review.comment %></br> -->
-    <!-- <%= image_tag review.logo, class: "review_logo" %> -->
-    <!-- Added on <%= time_ago_in_words review.created_at %> -->
-  <!-- can move this above p class to make logo in front of comment> -->
-  <!-- </div> -->
 <% end %>
 
 <h2 class= "review_contact">See for yourself</h2>
 
-<div class="social">
-      <i class="fa fa-github-alt fa-2x" aria-hidden="true"><a class="github" href="https://github.com/yankela"></a></i>
-      <i class="fa fa-twitter fa-2x" aria-hidden="true"><a class="twitter" href="https://twitter.com/yankel_a"></a></i>
-      <i class="fa fa-linkedin fa-2x" aria-hidden="true"><a class="linkedin"href="https://www.linkedin.com/in/yankel-amarante-63960794/"></a></i>
+    <div class="social">
+      <i class="fa fa-behance-square fa-5x" aria-hidden="true"><a href="https://www.google.com/"></a></i>
+      <i class="fa fa-instagram fa-5x" aria-hidden="true"><a href="https://www.google.com/"></a></i>
+      <i class="fa fa-twitter-square fa-5x" aria-hidden="true"><a href="https://www.google.com/"></a></i>
     </div>
 
 <%= link_to 'Edit', edit_service_path(@service) %> |

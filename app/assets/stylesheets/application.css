@@ -17,46 +17,53 @@
 * {
   text-decoration: none;
 }
+
+/*==========home page top===========*/
 .content-top {
   color: #fff;
+}
+
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
 }
 .content-top h1 {
   font-family: Adam,serif;
   font-size: 35px;
+  padding: .5em 0 0 .5em;
+  margin: 0 0 0 0;
 }
-
 .content-top h2 {
   font-family: porter,serif;
   font-size: 60px;
   text-align: center;
   margin: 3em 0 .5em 0;
 }
-
 .content-top h3 {
   font-family: porter;
   font-size: 25px;
   text-align: center;
 }
-
 .content-top h4 {
   font-family: porter;
   font-size: 15px;
   text-align: center;
-  margin-top: 26.5em;
-  padding: 0;
+  margin-top: 28.5em;
 }
-.body1 {
+.background_image {
     background-image: url("homepage.JPG");
     background-position: left top;
     background-repeat: no-repeat;
     background-size: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 
+/*========home page about us==========*/
 .about_us_title {
   font-family: porter;
     margin-top: 2.5em;
     font-size: 60px;
-  /*margin-top: 25em;*/
 }
 .content-bottom {
   font-family: futura;
@@ -64,29 +71,9 @@
   font-size: 15px;
   margin-bottom: 8em;
   margin-top: 2em;
-  /*transform: rotate(90deg);*/
-}
-.homeservice {
-  /*padding-left: 7.55em;
-  padding-right: 8.43em;*/
-/*margin-top: 10em;*/
-}
-.explore {
-  font-family: futura;
-  font-size: 15px;
-  opacity: 0.7;
-  text-align: center;
-  padding-left: 7.55em;
-  padding-right: 8.43em;
-}
-.titles {
-font-family: futura;
-font-size: 45px;
-opacity: 0.4;
-padding-left: .1em;
-padding-right: 1.65em;
 }
 
+/*==========about us images============*/
 .scott {
   float: right;
   margin: 13.5em 0 0 0em;
@@ -116,4 +103,24 @@ padding-right: 1.65em;
   font-family: futura;
   text-align: center;
   font-size: 15px;
+}
+
+/*========home page services=========*/
+.titles {
+font-family: futura;
+font-size: 45px;
+opacity: 0.4;
+padding-left: .1em;
+padding-right: 1.65em;
+}
+.explore {
+  font-family: futura;
+  font-size: 15px;
+  opacity: 0.7;
+  text-align: center;
+  padding-left: 7.55em;
+  padding-right: 8.43em;
+}
+.alldaserviceinfo {
+  text-align: center;
 }
