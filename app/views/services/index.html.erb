@@ -1,6 +1,5 @@
 <!-- <p id="notice"><%= notice %></p> -->
 
-
 <div class="background_image">
   <div class="content-top">
     <h1>WYNAGENCY</h1>
@@ -42,21 +41,17 @@ Our team is over 11 strong and counting.  With diverse backgrounds and experienc
 
   <div class="services">
     <% @services.each do |service| %>
-      <!-- <td class="titles"><%= service.title %></td> -->
     <%= image_tag service.url, size: "300x200", class: "homeservice"%>
-  <!-- <%= link_to 'EXPLORE', service, class:"explore"%> -->
     <% end %>
   </div>
 
   <div class="service_buttons">
     <% @services.each do |service| %>
     <%= link_to 'EXPLORE', service, class:"explore"%>
-  <!-- <td><%= link_to 'Edit', edit_service_path(service) %></td>
-  <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+    <!-- <%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Edit', edit_service_path(service) %> -->
     <% end %>
   </div>
 </div>
-
-
 
 <%= link_to 'New Service', new_service_path %>
