@@ -48,7 +48,8 @@ body {
   font-family: porter;
   font-size: 15px;
   text-align: center;
-  margin-top: 28.5em;
+  margin-top: 28em;
+  padding: .5em;
 }
 .background_image {
     background-image: url("homepage.JPG");
