@@ -1,6 +1,6 @@
 
 <p id="notice"><%= notice %></p>
-  <h1 class="service_title"> <%= @service.title%></h1>
+  <h1 class="service_title"> <%= @service.title%> </h1>
 </p>
 
 <p class="description_review">
@@ -14,9 +14,7 @@
 
 <!-- ADD review FORMS UNDER HERE -->
 
-<div class=""> <%= render 'reviews/form', review: @review %> </div>
 <h1 class="review_title">See what our clients have to say</h1>
-
 <!-- <% @service.reviews %> -->
 
 <% @service.reviews.each do |review| %>
@@ -48,5 +46,5 @@
       <i class="fa fa-twitter-square fa-5x" aria-hidden="true"><a href="https://www.google.com/"></a></i>
     </div>
 
-<%= link_to 'Edit', edit_service_path(@service) %> |
+<%# link_to 'Edit', edit_service_path(@service) %> |
 <%= link_to 'Back', services_path %>
