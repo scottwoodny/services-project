@@ -12,13 +12,16 @@
 
 ActiveRecord::Schema.define(version: 20170422185827) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "reviews", force: :cascade do |t|
     t.text     "comment"
     t.integer  "service_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "logo"
-    t.index ["service_id"], name: "index_reviews_on_service_id"
+    t.index ["service_id"], name: "index_reviews_on_service_id", using: :btree
   end
 
   create_table "services", force: :cascade do |t|
@@ -30,4 +33,5 @@ ActiveRecord::Schema.define(version: 20170422185827) do
     t.datetime "updated_at",     null: false
   end
 
+  add_foreign_key "reviews", "services"
 end
